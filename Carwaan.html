@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carwaan — Expert Car Repairs & Painting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- BACKGROUND STARS -->
+  <canvas id="stars"></canvas>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">CARWAAN</div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero section">
+    <h1>Expert Car Repairs & Painting</h1>
+    <p>Trusted service, lasting quality. From minor fixes to full paintwork.</p>
+    <a href="#contact" class="btn">Book Your Service</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section container">
+    <h2>Our Services</h2>
+    <p class="muted">Comprehensive car care with skilled technicians and precision tools.</p>
+    <div class="grid">
+      <div class="card"><h3>General Repairs</h3><p>Engine diagnostics, brakes, suspension, and electrical repairs done right.</p></div>
+      <div class="card"><h3>Accident & Dent Repair</h3><p>Full body repair, dent removal, and alignment for a safe, smooth drive.</p></div>
+      <div class="card"><h3>Professional Painting</h3><p>Color matching, spray booth painting, and touch-ups for a flawless finish.</p></div>
+      <div class="card"><h3>Car Detailing</h3><p>Interior and exterior detailing to restore showroom shine.</p></div>
+      <div class="card"><h3>Periodic Maintenance</h3><p>Oil changes, filters, tune-ups, and inspections to keep you moving.</p></div>
+      <div class="card"><h3>Customer Care</h3><p>Reliable service, honest pricing, and timely delivery every time.</p></div>
+    </div>
+  </section>
+
+  <!-- OUR WORK -->
+  <section id="work" class="section container">
+    <h2>Our Work</h2>
+    <p class="muted">See the transformations we deliver to our customers’ cars.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503731983532-7b8b6f9a1f43?w=800" alt="Dent Repair">
+        <h3>Dent & Accident Repair</h3>
+        <p>Restoring vehicles to pre-accident condition with precision repair.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?w=800" alt="Painting">
+        <h3>Painting & Finishing</h3>
+        <p>Factory-quality painting in controlled spray booths.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800" alt="Detailing">
+        <h3>Detailing</h3>
+        <p>Bringing back the shine inside and out with premium detailing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="section container">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+      <div class="card"><h3>🔧 Skilled Technicians</h3><p>Experienced hands who know cars inside out.</p></div>
+      <div class="card"><h3>🎨 Professional Painting</h3><p>High-quality paints and booths for lasting finish.</p></div>
+      <div class="card"><h3>🤝 Trusted Service</h3><p>Honest advice, transparent billing, and timely delivery.</p></div>
+      <div class="card"><h3>🚗 Complete Care</h3><p>From routine servicing to full body repair under one roof.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <p class="muted">Book an appointment or ask about our repair & paint services.</p>
+    <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.'); this.reset();">
+      <input class="full" type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone">
+      <textarea class="full" name="message" placeholder="What does your car need?" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Carwaan. Expert Repairs & Painting.
+  </footer>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
