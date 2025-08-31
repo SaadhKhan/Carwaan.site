@@ -68,19 +68,28 @@ nav a:hover, nav a.active {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  animation: slideShow 18s infinite;
+  background-repeat: no-repeat;
+  animation: logoSlideshow 27s infinite;
   z-index: -1;
-  opacity: 0.75;
+  opacity: 0.08; /* faint */
   transition: background-image 1s ease-in-out;
 }
-@keyframes slideShow {
-  0%   { background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600'); }
-  33%  { background-image: url('https://images.unsplash.com/photo-1542362567-b07e54358753?w=1600'); }
-  66%  { background-image: url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=1600'); }
-  100% { background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600'); }
+
+@keyframes logoSlideshow {
+  0%   { background-image: url('https://1000logos.net/wp-content/uploads/2018/03/Maruti-Suzuki-Logo.png'); }
+  11%  { background-image: url('https://1000logos.net/wp-content/uploads/2019/12/Tata-Motors-Logo.png'); }
+  22%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/08/Mahindra-Logo.png'); }
+  33%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/06/Hyundai-Logo.png'); }
+  44%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/03/Honda-logo.png'); }
+  55%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Toyota-logo.png'); }
+  66%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/03/Volkswagen-logo.png'); }
+  77%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Skoda-logo.png'); }
+  88%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Kia-logo.png'); }
+  100% { background-image: url('https://1000logos.net/wp-content/uploads/2017/06/MG-logo.png'); }
 }
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -101,11 +110,6 @@ nav a:hover, nav a.active {
 }
 .btn:hover {
   transform: scale(1.05);
-}
-/* ✅ Keep hero text above slideshow */
-.hero > * {
-  position: relative;
-  z-index: 1;
 }
 
 /* SECTIONS */
