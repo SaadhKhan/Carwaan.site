@@ -63,32 +63,6 @@ nav a:hover, nav a.active {
   padding: 0 1rem;
   overflow: hidden;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: logoSlideshow 27s infinite;
-  z-index: -1;
-  opacity: 0.08; /* faint */
-  transition: background-image 1s ease-in-out;
-}
-
-@keyframes logoSlideshow {
-  0%   { background-image: url('https://1000logos.net/wp-content/uploads/2018/03/Maruti-Suzuki-Logo.png'); }
-  11%  { background-image: url('https://1000logos.net/wp-content/uploads/2019/12/Tata-Motors-Logo.png'); }
-  22%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/08/Mahindra-Logo.png'); }
-  33%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/06/Hyundai-Logo.png'); }
-  44%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/03/Honda-logo.png'); }
-  55%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Toyota-logo.png'); }
-  66%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/03/Volkswagen-logo.png'); }
-  77%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Skoda-logo.png'); }
-  88%  { background-image: url('https://1000logos.net/wp-content/uploads/2017/05/Kia-logo.png'); }
-  100% { background-image: url('https://1000logos.net/wp-content/uploads/2017/06/MG-logo.png'); }
-}
 
 .hero h1 {
   font-size: 3rem;
@@ -110,6 +84,42 @@ nav a:hover, nav a.active {
 }
 .btn:hover {
   transform: scale(1.05);
+}
+
+/* SLIDESHOW FADE */
+.slideshow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1; /* behind text but above stars */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slideshow img {
+  position: absolute;
+  max-width: 40%;
+  opacity: 0.08; /* faint */
+  animation: fadeSlideshow 30s infinite;
+}
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 3s; }
+.slideshow img:nth-child(3) { animation-delay: 6s; }
+.slideshow img:nth-child(4) { animation-delay: 9s; }
+.slideshow img:nth-child(5) { animation-delay: 12s; }
+.slideshow img:nth-child(6) { animation-delay: 15s; }
+.slideshow img:nth-child(7) { animation-delay: 18s; }
+.slideshow img:nth-child(8) { animation-delay: 21s; }
+.slideshow img:nth-child(9) { animation-delay: 24s; }
+.slideshow img:nth-child(10){ animation-delay: 27s; }
+
+@keyframes fadeSlideshow {
+  0% { opacity: 0; }
+  5% { opacity: 0.08; }
+  20% { opacity: 0.08; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 /* SECTIONS */
@@ -226,44 +236,4 @@ footer {
 @keyframes popIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
-}
-
-/* SLIDESHOW BEHIND HERO */
-.slideshow {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1; /* behind text */
-  overflow: hidden;
-}
-
-.slideshow img {
-  position: absolute;
-  max-width: 200px;
-  opacity: 0;
-  animation: fadeSlideshow 30s infinite;
-  filter: brightness(0) invert(1); /* makes logos faint white */
-}
-
-/* Each image fades at a different time */
-.slideshow img:nth-child(1) { animation-delay: 0s; }
-.slideshow img:nth-child(2) { animation-delay: 3s; }
-.slideshow img:nth-child(3) { animation-delay: 6s; }
-.slideshow img:nth-child(4) { animation-delay: 9s; }
-.slideshow img:nth-child(5) { animation-delay: 12s; }
-.slideshow img:nth-child(6) { animation-delay: 15s; }
-.slideshow img:nth-child(7) { animation-delay: 18s; }
-.slideshow img:nth-child(8) { animation-delay: 21s; }
-.slideshow img:nth-child(9) { animation-delay: 24s; }
-.slideshow img:nth-child(10) { animation-delay: 27s; }
-
-@keyframes fadeSlideshow {
-  0%   { opacity: 0; }
-  10%  { opacity: 0.15; }  /* faintly visible */
-  30%  { opacity: 0.15; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
 }
