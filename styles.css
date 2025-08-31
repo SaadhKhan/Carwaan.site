@@ -267,3 +267,15 @@ footer {
   20%  { opacity: 0; transform: translateY(-100%); }
   100% { opacity: 0; }
 }
+
+.text-slideshow {
+  margin: 1rem 0;              /* space above and below */
+  font-size: 1.4rem;
+  color: #0ff;
+  font-weight: bold;
+  height: 1.5em;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-align: center;          /* keep centered */
+}
