@@ -72,3 +72,16 @@ if (closePopup) {
     popup.style.display = "none";
   });
 }
+
+const texts = document.querySelectorAll('.text-slideshow span');
+let index = 0;
+
+function showNextText() {
+  texts.forEach((text, i) => {
+    text.style.display = (i === index) ? 'inline' : 'none';
+  });
+  index = (index + 1) % texts.length;
+}
+
+showNextText(); // show first one immediately
+setInterval(showNextText, 2000); // change every 2 sec
