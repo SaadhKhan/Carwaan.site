@@ -45,3 +45,36 @@ function animate() {
 }
 
 animate();
+
+// ==========================
+// FORM POPUP HANDLING
+// ==========================
+const form = document.querySelector("form");
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closePopup");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      form.reset();
+      popup.style.display = "flex";
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  });
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+}
