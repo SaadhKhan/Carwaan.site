@@ -81,18 +81,27 @@
   <section id="contact" class="section container">
     <h2>Contact</h2>
     <p class="muted">Book an appointment or ask about our repair & paint services.</p>
-  <form action="https://formspree.io/f/xjkewgge" method="POST">
-  <input class="full" type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="tel" name="phone" placeholder="Phone">
-  <textarea class="full" name="message" placeholder="What does your car need?" required></textarea>
+    <form id="contactForm" action="https://formspree.io/f/xjkewgge" method="POST">
+      <input class="full" type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone">
+      <textarea class="full" name="message" placeholder="What does your car need?" required></textarea>
 
-     <!-- Honeypot field (invisible to users, traps bots) -->
-  <input type="text" name="_gotcha" style="display:none">
-    
-  <button class="btn" type="submit">Send Message</button>
-</form>
+      <!-- Honeypot -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
   </section>
+
+  <!-- POPUP -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h3>✅ Message Sent!</h3>
+      <p>Thanks for reaching out. We’ll get back to you soon.</p>
+      <button id="closePopup" class="btn">Close</button>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -103,7 +112,4 @@
   <script src="app.js"></script>
 </body>
 </html>
-
-
-
 
