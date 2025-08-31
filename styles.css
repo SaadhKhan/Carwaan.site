@@ -102,6 +102,11 @@ nav a:hover, nav a.active {
 .btn:hover {
   transform: scale(1.05);
 }
+/* ✅ Keep hero text above slideshow */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* SECTIONS */
 .section {
